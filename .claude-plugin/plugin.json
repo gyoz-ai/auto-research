@@ -1,0 +1,11 @@
+{
+  "name": "auto-research",
+  "version": "1.0.0",
+  "description": "Autonomous skill improvement through parallel research agents using the autoresearch methodology",
+  "author": {
+    "name": "gyoz-ai",
+    "url": "https://github.com/gyoz-ai"
+  },
+  "repository": "https://github.com/gyoz-ai/auto-research",
+  "license": "MIT"
+}

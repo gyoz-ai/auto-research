@@ -70,21 +70,39 @@ The auditor agent scores skills on:
 
 ## Installation
 
-### Option 1: Copy the file
+### Option 1: Plugin Directory (recommended)
 
-```bash
-# Create the commands directory if it doesn't exist
-mkdir -p ~/.claude/commands
+Install directly from the Claude Code plugin directory:
 
-# Copy the command file
-cp commands/auto-research.md ~/.claude/commands/auto-research.md
+```
+/plugins
 ```
 
-### Option 2: Symlink (stays updated with git pulls)
+Search for **auto-research** and install it.
+
+### Option 2: Install plugin from GitHub
+
+```bash
+# In any Claude Code session:
+/install-plugin https://github.com/gyoz-ai/auto-research
+```
+
+### Option 3: Manual install
+
+Clone and symlink the skill:
 
 ```bash
 git clone https://github.com/gyoz-ai/auto-research.git ~/auto-research
-ln -s ~/auto-research/commands/auto-research.md ~/.claude/commands/auto-research.md
+mkdir -p ~/.claude/skills/auto-research
+ln -s ~/auto-research/skills/auto-research/SKILL.md ~/.claude/skills/auto-research/SKILL.md
+```
+
+Or copy directly:
+
+```bash
+mkdir -p ~/.claude/skills/auto-research
+curl -o ~/.claude/skills/auto-research/SKILL.md \
+  https://raw.githubusercontent.com/gyoz-ai/auto-research/main/skills/auto-research/SKILL.md
 ```
 
 ## Usage
@@ -112,6 +130,19 @@ The command runs autonomously -- it won't ask for permission between experiments
 
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) CLI, desktop app, or IDE extension
 - An existing skill to improve (in `~/.claude/skills/` or `.claude/skills/`)
+
+## Plugin structure
+
+```
+auto-research/
+├── .claude-plugin/
+│   └── plugin.json
+├── skills/
+│   └── auto-research/
+│       └── SKILL.md
+├── LICENSE
+└── README.md
+```
 
 ## Credits
 

@@ -1,5 +1,7 @@
 ---
-description: "Autonomous skill improvement through parallel research agents. Applies the autoresearch methodology (Karpathy) to iteratively improve an existing Claude Code skill. Spawns 5 research agents, synthesizes findings, then enters an iterative keep/discard improvement loop. Usage: /auto-research <skill-name-or-path>"
+name: auto-research
+description: "Autonomous skill improvement through parallel research agents. Applies the autoresearch methodology (Karpathy) to iteratively improve an existing Claude Code skill. Spawns 5 research agents, synthesizes findings, then enters an iterative keep/discard experiment loop. Usage: /auto-research <skill-name-or-path>"
+argument-hint: <skill-name-or-path>
 allowed-tools: Agent, Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 ---
 
